@@ -47,11 +47,10 @@ export default async function main() {
     try {
         const commits = await getCommits();
         const changelog = commits
-            .filter((commit) => !!commit.commit.message)
             .map((commit) => commit.commit.message)
             .join("\n");
         
-        core.setOutput("changelog", changelog)
+        core.setOutput("log", changelog)
     } catch (error) {
         core.setFailed(error.message);
     }
