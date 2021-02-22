@@ -19,4 +19,4 @@ jobs:
         baseRef: 'v1.0.0'
         
     - name: Echo log
-      run: echo '${{ steps.log.output.log }}'
+      run: echo '${{ steps.log.outputs.log }}'
