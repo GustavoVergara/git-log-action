@@ -6,7 +6,7 @@ Get log using GitHub API.
 
 ### `baseRef`
 
-**Required** Point of reference to the start of the log. Default `"World"`.
+**Required** Point of reference to the start of the log.
 
 ### `headRef`
 
