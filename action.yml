@@ -11,7 +11,7 @@ inputs:
 
 outputs:
   log:
-    description: 'The log received from GitHub's API'
+    description: 'The log received from GitHub´s API'
 
 runs:
   using: 'node12'
