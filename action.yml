@@ -1,0 +1,18 @@
+name: 'GitHub Log'
+description: 'Get log using GitHub API'
+inputs:
+  baseRef:
+    description: 'Point of reference to the start of the log'
+    required: true
+  headRef:
+    description: 'Point of reference to the end of the log'
+    required: true
+    default: HEAD
+
+outputs:
+  log:
+    description: 'The log received from GitHub's API'
+
+runs:
+  using: 'node12'
+  main: 'index.ts'
