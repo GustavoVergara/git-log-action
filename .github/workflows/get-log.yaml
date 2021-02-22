@@ -1,0 +1,20 @@
+name: Get Log
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Get git log
+      id: log
+      uses: ./
+      with:
+        baseRef: 'v1.0.0'
+        
+    - name: Echo log
+      run: echo '${{ steps.log.output.log }}'
