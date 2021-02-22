@@ -75,9 +75,13 @@ function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const commits = yield getCommits();
+            core.debug(commits.toString());
+            console.log(commits);
             const changelog = commits
                 .map((commit) => commit.commit.message)
                 .join("\n");
+            core.debug("Got changelog: \n" + changelog);
+            console.log("Got changelog: \n" + changelog);
             core.setOutput("log", changelog);
         }
         catch (error) {

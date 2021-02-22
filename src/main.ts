@@ -46,9 +46,15 @@ async function getCommits() {
 export default async function main() {
     try {
         const commits = await getCommits();
+        core.debug(commits.toString())
+        console.log(commits)
+        
         const changelog = commits
             .map((commit) => commit.commit.message)
             .join("\n");
+        
+        core.debug("Got changelog: \n" + changelog)
+        console.log("Got changelog: \n" + changelog)
         
         core.setOutput("log", changelog)
     } catch (error) {
