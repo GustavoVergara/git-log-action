@@ -55,3 +55,5 @@ export default async function main() {
         core.setFailed(error.message);
     }
 }
+
+main()
