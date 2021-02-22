@@ -79,7 +79,7 @@ function main() {
             console.log(commits);
             core.endGroup();
             const changelog = commits
-                .map((commit) => commit.commit.message)
+                .map((commit) => `### ${commit.commit.message}`)
                 .join("\n");
             core.startGroup("Generated changelog");
             console.log(changelog);

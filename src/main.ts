@@ -51,7 +51,7 @@ export default async function main() {
         core.endGroup()
         
         const changelog = commits
-            .map((commit) => commit.commit.message)
+            .map((commit) => `### ${commit.commit.message}`)
             .join("\n");
         
         core.startGroup("Generated changelog")
